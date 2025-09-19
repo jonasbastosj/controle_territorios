@@ -252,4 +252,42 @@ export default function AdicionarPage() {
                 <Label htmlFor="observations" className="text-slate-700 font-medium">
                   Observações
                 </Label>
-                <
+                <Textarea
+                  id="observations"
+                  value={formData.observations}
+                  onChange={(e) =>
+                    handleInputChange("observations", e.target.value)
+                  }
+                  placeholder="Anotações importantes sobre este endereço..."
+                  rows={4}
+                  className="border-slate-200 focus:border-blue-400 bg-white/70 resize-none"
+                />
+              </div>
+
+              <div className="flex justify-end pt-6">
+                <Button
+                  type="submit"
+                  disabled={
+                    isSubmitting ||
+                    !formData.address ||
+                    !formData.territory ||
+                    !formData.assigned_to_email
+                  }
+                  className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 shadow-lg hover:shadow-xl transition-all duration-200 px-8 py-3"
+                >
+                  {isSubmitting ? (
+                    "Salvando..."
+                  ) : (
+                    <>
+                      <Save className="w-5 h-5 mr-2" /> Salvar Endereço
+                    </>
+                  )}
+                </Button>
+              </div>
+            </form>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  );
+}
