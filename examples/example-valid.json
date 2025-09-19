@@ -1,0 +1,12 @@
+{
+  "address": "Rua das Flores, 123",
+  "territory": "Zona Norte",
+  "status": "falta_pregar",
+  "contact_name": "João Silva",
+  "phone": "+55 11 98765-4321",
+  "observations": "Tem cachorro no portão",
+  "best_time": "Sábado à tarde",
+  "last_visit_date": "2025-09-10",
+  "visit_count": 2,
+  "assigned_to_email": "joao@example.com"
+}
