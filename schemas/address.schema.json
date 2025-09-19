@@ -1,63 +1,17 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Address",
+  "name": "Address",
   "type": "object",
   "properties": {
-    "address": {
-      "type": "string",
-      "description": "Endereço completo"
-    },
-    "territory": {
-      "type": "string",
-      "description": "Território ou área"
-    },
-    "status": {
-      "type": "string",
-      "enum": [
-        "falta_pregar",
-        "pregado"
-      ],
-      "default": "falta_pregar",
-      "description": "Status da visita"
-    },
-    "contact_name": {
-      "type": "string",
-      "description": "Nome do contato"
-    },
-    "phone": {
-      "type": "string",
-      "pattern": "^[+]?[0-9\\-\\s]{8,15}$",
-      "description": "Telefone de contato (aceita +, dígitos, - e espaços)"
-    },
-    "observations": {
-      "type": "string",
-      "description": "Observações sobre o endereço"
-    },
-    "best_time": {
-      "type": "string",
-      "description": "Melhor horário para visita"
-    },
-    "last_visit_date": {
-      "type": "string",
-      "format": "date",
-      "description": "Data da última visita"
-    },
-    "visit_count": {
-      "type": "integer",
-      "minimum": 0,
-      "default": 0,
-      "description": "Número de vezes que o endereço foi visitado"
-    },
-    "assigned_to_email": {
-      "type": "string",
-      "format": "email",
-      "description": "Email do usuário responsável pelo endereço"
-    }
+    "address": {"type": "string"},
+    "territory": {"type": "string"},
+    "status": {"type": "string","enum":["falta_pregar","pregado"],"default":"falta_pregar"},
+    "contact_name": {"type": "string"},
+    "phone": {"type": "string"},
+    "observations": {"type": "string"},
+    "best_time": {"type": "string"},
+    "last_visit_date": {"type": "string","format":"date"},
+    "visit_count": {"type": "number","default":0},
+    "assigned_to_email": {"type": "string"}
   },
-  "required": [
-    "address",
-    "territory",
-    "status",
-    "assigned_to_email"
-  ]
+  "required":["address","territory","status","assigned_to_email"]
 }
