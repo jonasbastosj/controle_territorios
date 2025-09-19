@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Address } from "@/entities/Address";
+import { Address } from "../entities/Address";
 import { User } from "@/entities/User";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
